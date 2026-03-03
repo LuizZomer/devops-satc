@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Login from "./pages/Login";
-import Users from "./pages/users";
-import Cep from "./pages/cep";
+import Users from "./pages/Users";
+import Cep from "./pages/Cep";
 
 function App() {
   return (
