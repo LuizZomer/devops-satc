@@ -3,8 +3,11 @@ import axios from "axios";
 
 interface User {
   id: number;
+  name: string;
   email: string;
-  first_name: string;
+  username: string;
+  phone: string;
+  website: string;
 }
 
 export default function Users() {
@@ -13,9 +16,9 @@ export default function Users() {
   useEffect(() => {
     async function fetchUsers() {
       const response = await axios.get(
-        "https://reqres.in/api/users?page=1"
+        "https://jsonplaceholder.typicode.com/users"
       );
-      setUsers(response.data.data);
+      setUsers(response.data); 
     }
 
     fetchUsers();
@@ -28,8 +31,15 @@ export default function Users() {
       <div className="user-list">
         {users.map((user) => (
           <div key={user.id} className="user-item">
-            <p><strong>Nome:</strong> {user.first_name}</p>
-            <p><strong>Email:</strong> {user.email}</p>
+            <div className="user-header">
+              <p className="user-name">{user.name}</p>
+              <p className="user-username">@{user.username}</p>
+            </div>
+            <div className="user-details">
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Telefone:</strong> {user.phone}</p>
+              <p><strong>Website:</strong> {user.website}</p>
+            </div>
           </div>
         ))}
       </div>
