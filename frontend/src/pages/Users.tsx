@@ -15,7 +15,6 @@ export default function Users() {
       const response = await axios.get(
         "https://reqres.in/api/users?page=1"
       );
-
       setUsers(response.data.data);
     }
 
@@ -23,14 +22,17 @@ export default function Users() {
   }, []);
 
   return (
-    <div>
+    <div className="card-container">
       <h2>Usuários</h2>
 
-      {users.map((user) => (
-        <div key={user.id}>
-          {user.first_name} - {user.email}
-        </div>
-      ))}
+      <div className="user-list">
+        {users.map((user) => (
+          <div key={user.id} className="user-item">
+            <p><strong>Nome:</strong> {user.first_name}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

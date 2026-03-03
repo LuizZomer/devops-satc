@@ -21,7 +21,7 @@ export default function Cep() {
   }
 
   return (
-    <div>
+    <div className="card-container">
       <h2>Buscar CEP</h2>
 
       <input
@@ -33,10 +33,12 @@ export default function Cep() {
       <button onClick={buscarCep}>Buscar</button>
 
       {address && (
-        <div>
-          <p>{address.logradouro}</p>
-          <p>{address.bairro}</p>
-          <p>{address.localidade} - {address.uf}</p>
+        <div className="address-box">
+          <p><strong>Rua:</strong> {address.logradouro}</p>
+          <p><strong>Bairro:</strong> {address.bairro}</p>
+          <p>
+            <strong>Cidade:</strong> {address.localidade} - {address.uf}
+          </p>
         </div>
       )}
     </div>
