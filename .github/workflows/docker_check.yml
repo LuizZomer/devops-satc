@@ -39,7 +39,7 @@ jobs:
 
       # 👇 Mostra vulnerabilidades no log (legível)
       - name: Run Trivy (table output)
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@0.28.0        
         with:
           scan-type: image
           image-ref: docker.io/zomer14/satc-devops:0.0.1
