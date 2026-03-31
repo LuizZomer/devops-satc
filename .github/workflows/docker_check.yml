@@ -48,7 +48,7 @@ jobs:
 
       # 👇 Gera JSON para análise
       - name: Run Trivy (JSON)
-        uses: aquasecurity/trivy-action@0.20.0
+        aquasecurity/trivy-action@master        
         with:
           scan-type: image
           image-ref: docker.io/zomer14/satc-devops:0.0.1
