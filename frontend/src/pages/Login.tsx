@@ -9,13 +9,10 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://reqres.in/api/login",
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post("https://reqres.in/api/login", {
+        email,
+        password,
+      });
 
       alert("Token: " + response.data.token);
     } catch (error) {
@@ -26,6 +23,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <h2>Login</h2>
+      <h2>Criado por Luiz Felipe Silveira Zomer</h2>
 
       <form onSubmit={handleLogin}>
         <input
