@@ -1,0 +1,195 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Links */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+/* Hover */
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Área de conteúdo */
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Fundo da página */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal */
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Botão */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #5a67d8;
+}
+
+/* Card padrão para páginas */
+.card-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;           /* ocupar toda a largura possível */
+  max-width: 750px;      /* mas não ultrapassar 750px */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Inputs dentro do card */
+.card-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.card-container input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Botão */
+.card-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-container button:hover {
+  background: #5a67d8;
+}
+
+/* Caixa do endereço */
+.address-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f4f6ff;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Lista de usuários em grid responsivo */
+.user-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  min-width: 70vh;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.user-item {
+  background: #f4f6ff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+/* Header do usuário */
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nome maior e negrito */
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Username menor e cinza */
+.user-username {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Detalhes do usuário */
+.user-details p {
+  margin: 3px 0;
+}
